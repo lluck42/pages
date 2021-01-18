@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>我是首页 哈哈哈</h1>
+    <h2>新闻列表</h2>
+    {{range where .Site.RegularPages "Section" "post"}}
+    <div>
+        <a href="{{.}}">{{.Title}}</a>
+    </div>
+    {{end}}
 </body>
 </html>
