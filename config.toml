@@ -1,4 +1,4 @@
-baseURL = "https://lluck42.gitee.io/mysite/"
+baseURL = "https://lluck42.gitee.io"
 languageCode = "en-us"
 title = "lluck42个人博客"
 theme = "ananke"
