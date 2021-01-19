@@ -1,4 +1,8 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "first_theme"
+title = "lluck42个人博客"
+theme = "ananke"
+Copyright = "lluck42@163.com"
+
+[params]
+  description = "Tesla's Awesome Hugo Site"
