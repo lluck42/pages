@@ -2,7 +2,7 @@ baseURL = "https://lluck42.gitee.io"
 languageCode = "en-us"
 title = "lluck42个人博客"
 theme = "ananke"
-Copyright = "lluck42@163.com"
+Copyright = "lluck42"
 
 [params]
   description = "Tesla's Awesome Hugo Site"
