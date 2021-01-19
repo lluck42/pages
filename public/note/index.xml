@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on lluck42个人博客</title>
+    <link>http://example.org/note/</link>
+    <description>Recent content in Notes on lluck42个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>lluck42@163.com</copyright>
+    <lastBuildDate>Thu, 17 Jan 2019 17:11:04 +0800</lastBuildDate><atom:link href="http://example.org/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubeadm config image 阿里云镜像</title>
+      <link>http://example.org/note/kubeadm%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/</link>
+      <pubDate>Thu, 17 Jan 2019 17:11:04 +0800</pubDate>
+      
+      <guid>http://example.org/note/kubeadm%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/</guid>
+      <description>这个脚本无意中看到了，要和 kubeadm config image list 配合使用 用于 kubeadm 的阿里云镜像下载，还是挺重要的
+images=( kube-apiserver:v1.13.2 kube-controller-manager:v1.13.2 kube-scheduler:v1.13.2 kube-proxy:v1.13.2 pause:3.1 etcd:3.2.24 coredns:1.2.6 ) for imageName in ${images[@]} ; do docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/${imageName} docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/${image} k8s.gcr.io/${imageName} docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/${imageName} done </description>
+    </item>
+    
+    <item>
+      <title>简单的 c 调用 libvlc 播放视频</title>
+      <link>http://example.org/note/c%E8%B0%83%E7%94%A8libvlc%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Wed, 19 Dec 2018 10:19:05 +0800</pubDate>
+      
+      <guid>http://example.org/note/c%E8%B0%83%E7%94%A8libvlc%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</guid>
+      <description>最近在看 libvlc.dll 使用方式，
+不巧的是，这方面的中文资料比较少，有些还是基于 c# 或是 vs的，毕竟太依赖于编辑器
+于是乎，找资料呀找资料，官网 win demo 看起来挺不错的 ，官网 0.8.6c sdk 下载
+费了我九牛二虎之力，毕竟还是 c 太生疏，英语也不咋地
+(git 自带 mingw64)
+然后发现跑不起来。。。（为啥呢，我想是因为 官方的案例是 基于 x86的，而我用的是 64 位的编译器，官方64位的代码中，没找到 libvlc.dll 尴尬）
+于是乎，csdn 上 所幸有 雷霄骅 大神贴出了代码 最简单的基于libVLC的例子，然后还是似懂非懂
+然后找到了更简单的例子 如何使用libvlc实现最简单的播放器 , 之后按照 这位大神的例子成功的播放了视频！
+第一点，编译器 gcc 位数要和代码一致！
+第二点，要写一些 gcc 启动参数来指定配置
+ gcc -I /d/test -L /d/test -llibvlc -o demo2.exe demo2.c &amp;amp;&amp;amp; ./demo2.exe -L dll文件位置 -I .h文件位置 以上</description>
+    </item>
+    
+    <item>
+      <title>kubeadm config image 阿里云镜像</title>
+      <link>http://example.org/note/thinkphpgroupby%E7%BB%84%E5%86%85%E6%8E%92%E5%BA%8F%E5%86%99%E6%B3%95/</link>
+      <pubDate>Wed, 20 Dec 2017 15:32:57 +0800</pubDate>
+      
+      <guid>http://example.org/note/thinkphpgroupby%E7%BB%84%E5%86%85%E6%8E%92%E5%BA%8F%E5%86%99%E6%B3%95/</guid>
+      <description>有时候会遇到需要对分组内 group by 的数据进行排序。比如，一对多联表查询后，列表显示 A 表，需要关联显示 B 表的最新一条数据。
+这个时候就是比较不常见的 组内排序 group by 的例子了。
+直接上例子：
+$list=M(&#39;order&#39;)-&amp;gt;field(&#39;a.is_refunded,a.is_closed,a.total,a.express,a.refunded_money,b.*&#39;)-&amp;gt;alias(&#39;a&#39;)-&amp;gt;join(&#39;work_order b ON a.order_code = b.order_code&#39;)-&amp;gt;order(&#39;b.id desc&#39;)-&amp;gt;group(&#39;a.order_code&#39;)-&amp;gt;select(); $list=M(&#39;order&#39;)-&amp;gt;field(&#39;a.is_refunded,a.is_closed,a.total,a.express,a.refunded_money,b.*&#39;)-&amp;gt;alias(&#39;a&#39;)-&amp;gt;join(&#39;(select * from work_order order by id desc) b ON a.order_code = b.order_code&#39;)-&amp;gt;order(&#39;b.id desc&#39;)-&amp;gt;group(&#39;a.order_code&#39;)-&amp;gt;select(); 关键点：
+查询语句的对象 select * from bear_work_order order by id desc 代替了原生表对象 work_order
+就是这么简单，灵感来源于
+ http://bbs.csdn.net/wap/topics/80276095
+ select * from StudentGrade a where (select count(1) from studentGrade where subId=a.subId and grade&amp;gt;=a.grade)&amp;lt;=2
+虽然是是有些凌乱，但是 mysql 对象 的反复操作还是很好的</description>
+    </item>
+    
+  </channel>
+</rss>
