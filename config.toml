@@ -1,8 +1,11 @@
+Author = "lluck42"
+Copyright = "lluck42"
 baseURL = "https://lluck42.gitee.io"
 languageCode = "en-us"
-title = "lluck42个人博客"
 theme = "ananke"
-Copyright = "lluck42"
+title = "lluck42个人博客"
+summaryLength = 20
 
 [params]
-  description = "Tesla's Awesome Hugo Site"
+description = "Tesla's Aweso22me Hugo Site"
+mainSections = ["note"]
