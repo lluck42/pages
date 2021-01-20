@@ -36,7 +36,7 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://lluck42.gitee.io/" />
-<meta property="og:updated_time" content="2019-01-17T17:11:04+08:00" />
+<meta property="og:updated_time" content="2021-01-20T10:52:42+08:00" />
 <meta itemprop="name" content="lluck42的个人主页">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -136,13 +136,39 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://lluck42.gitee.io/note/2021%E5%B9%B41%E6%9C%8820%E6%97%A5/" class="color-inherit dim link">
+            2021年1月20日
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          
+          
+        </div>
+          <a href="https://lluck42.gitee.io/note/2021%E5%B9%B41%E6%9C%8820%E6%97%A5/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://lluck42.gitee.io/note/kubeadm%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/" class="color-inherit dim link">
             kubeadm config image 阿里云镜像
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          这个脚本无意中看到了，要和 kubeadm config image list 配合使用 用于 kubeadm 的阿里云镜像下载，还是挺重要的
-images=( kube-apiserver:v1.13.2 kube-controller-manager:v1.13.2 kube-scheduler:v1.13.2 kube-proxy:v1.13.2 pause:3.1 etcd:3.2.24 coredns:1.2.6 ) for imageName in ${images[@]} ; do docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/${imageName} docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/${image} k8s.gcr.io/${imageName} docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/${imageName} done 
+          
+          <p>这个脚本无意中看到了，要和 <code>kubeadm config image list</code> 配合使用
+用于 kubeadm 的阿里云镜像下载，还是挺重要的</p>
         </div>
           <a href="https://lluck42.gitee.io/note/kubeadm%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
@@ -166,51 +192,12 @@ images=( kube-apiserver:v1.13.2 kube-controller-manager:v1.13.2 kube-scheduler:v
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          最近在看 libvlc.dll 使用方式，
-不巧的是，这方面的中文资料比较少，有些还是基于 c# 或是 vs的，毕竟太依赖于编辑器
-于是乎，找资料呀找资料，官网 win demo 看起来挺不错的 ，官网 0.8.6c sdk 下载
-费了我九牛二虎之力，毕竟还是 c 太生疏，英语也不咋地
-(git 自带 mingw64)
-然后发现跑不起来。。。（为啥呢，我想是因为 官方的案例是 基于 x86的，而我用的是 64 位的编译器，官方64位的代码中，没找到 libvlc.dll 尴尬）
-于是乎，csdn 上 所幸有 雷霄骅 大神贴出了代码 最简单的基于libVLC的例子，然后还是似懂非懂
-然后找到了更简单的例子 如何使用libvlc实现最简单的播放器 , 之后按照 这位大神的例子成功的播放了视频！
-第一点，编译器 gcc 位数要和代码一致！
-第二点，要写一些 gcc 启动参数来指定配置
- gcc -I /d/test -L /d/test -llibvlc -o demo2.exe demo2.c &amp;&amp; ./demo2.exe -L dll文件位置 -I .h文件位置 以上
+          
+          <p>最近在看 libvlc.dll 使用方式,
+不巧的是，这方面的中文资料比较少，有些还是基于 c# 或是 vs的，毕竟太依赖于编辑器。
+于是乎，找资料呀找资料，官网 win demo 看起来挺不错的 ，官网 0.8.6c sdk 下载。</p>
         </div>
           <a href="https://lluck42.gitee.io/note/c%E8%B0%83%E7%94%A8libvlc%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://lluck42.gitee.io/note/thinkphpgroupby%E7%BB%84%E5%86%85%E6%8E%92%E5%BA%8F%E5%86%99%E6%B3%95/" class="color-inherit dim link">
-            kubeadm config image 阿里云镜像
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          有时候会遇到需要对分组内 group by 的数据进行排序。比如，一对多联表查询后，列表显示 A 表，需要关联显示 B 表的最新一条数据。
-这个时候就是比较不常见的 组内排序 group by 的例子了。
-直接上例子：
-$list=M('order')-&gt;field('a.is_refunded,a.is_closed,a.total,a.express,a.refunded_money,b.*')-&gt;alias('a')-&gt;join('work_order b ON a.order_code = b.order_code')-&gt;order('b.id desc')-&gt;group('a.order_code')-&gt;select(); $list=M('order')-&gt;field('a.is_refunded,a.is_closed,a.total,a.express,a.refunded_money,b.*')-&gt;alias('a')-&gt;join('(select * from work_order order by id desc) b ON a.order_code = b.order_code')-&gt;order('b.id desc')-&gt;group('a.order_code')-&gt;select(); 关键点：
-查询语句的对象 select * from bear_work_order order by id desc 代替了原生表对象 work_order
-就是这么简单，灵感来源于
- http://bbs.csdn.net/wap/topics/80276095
- select * from StudentGrade a where (select count(1) from studentGrade where subId=a.subId and grade&gt;=a.grade)&lt;=2
-虽然是是有些凌乱，但是 mysql 对象 的反复操作还是很好的
-        </div>
-          <a href="https://lluck42.gitee.io/note/thinkphpgroupby%E7%BB%84%E5%86%85%E6%8E%92%E5%BA%8F%E5%86%99%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -222,6 +209,23 @@ $list=M('order')-&gt;field('a.is_refunded,a.is_closed,a.total,a.express,a.refund
       </section>
 
       
+      <section class="w-100">
+        <h1 class="f3">More</h1>
+        
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://lluck42.gitee.io/note/thinkphpgroupby%E7%BB%84%E5%86%85%E6%8E%92%E5%BA%8F%E5%86%99%E6%B3%95/" class="link black dim">
+              kubeadm config image 阿里云镜像
+            </a>
+          </h2>
+        
+
+        
+        
+          <a href="https://lluck42.gitee.io/note/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Notes</a>
+        
+        </section>
+      
 
       </div>
   
@@ -230,7 +234,7 @@ $list=M('order')-&gt;field('a.is_refunded,a.is_closed,a.total,a.express,a.refund
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://lluck42.gitee.io" >
-    &copy;  lluck42@163.com 2021 
+    &copy;  lluck42 2021 
   </a>
     <div>
 
