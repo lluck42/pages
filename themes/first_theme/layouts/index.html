@@ -1,16 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
+<style>
+    /* 电脑样式 */
+    @media only screen and (min-width: 500px) {
+        .body {
+            margin: 0 auto;
+            width: 60%;
+            height: 500px;
+            border: 2px solid red;
+        }
+    }
+
+    /* 公共样式 */
+    .body {
+        margin: 0 auto;
+        /* border: 2px solid red; */
+        height: 500px;
+    }
+
+    .banner {
+        /* border: 2px solid red; */
+        margin: 0 auto;
+        font-family: KaiTi;
+        text-align: center;
+        width: 100%;
+    }
+</style>
+
 <body>
-    <h2>新闻列表</h2>
-    {{range where .Site.RegularPages "Section" "post"}}
-    <div>
-        <a href="{{.}}">{{.Title}}</a>
+    <div id="app" class="body">
+        <template v-for="(val,ind) in banner">
+            <div class="banner" v-if="ind==banner_now_show">
+                <h1>[[val]]</h1>
+            </div>
+        </template>
     </div>
-    {{end}}
+    <script>
+        var app = new Vue({
+            el: '#app',
+            delimiters: ['[[', ']]'],
+            data: {
+                banner: [
+                    '艰苦奋斗', '奋勇向前', '努力拼搏', '开阔创新', '务实进取', '我是吕奉先'
+                ],
+                banner_now_show: 1,
+                timer: null,
+            },
+            mounted() {
+                this.timer = setInterval(() => {
+                    if (this.banner_now_show >= (this.banner.length - 1)) {
+                        this.banner_now_show = -1
+                    }
+                    this.banner_now_show = this.banner_now_show + 1
+                }, 3000)
+            },
+            beforeDestroy() {
+                clearInterval(this.timer);
+                this.timer = null;
+            },
+
+            methods: {
+                changeBanner() {
+
+                }
+            }
+        })
+    </script>
 </body>
+
 </html>
