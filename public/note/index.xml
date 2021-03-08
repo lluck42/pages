@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>lluck42</copyright>
-    <lastBuildDate>Fri, 22 Jan 2021 15:01:42 +0800</lastBuildDate><atom:link href="https://lluck42.gitee.io/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Mar 2021 11:43:25 +0800</lastBuildDate><atom:link href="https://lluck42.gitee.io/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>百度图片检索api</title>
+      <link>https://lluck42.gitee.io/note/baidu-picture-search-api/</link>
+      <pubDate>Mon, 08 Mar 2021 11:43:25 +0800</pubDate>
+      
+      <guid>https://lluck42.gitee.io/note/baidu-picture-search-api/</guid>
+      <description>因项目需求，需要图片检索
+本打算从百度图片检索中网页抓取，但是无意间看到了一个api
+多次测试、删减参数，剩余参数如下：
+https://image.baidu.com/search/acjson?tn=resultjson_com&amp;amp;ipn=rj&amp;amp;word=火爆鱿鱼&amp;amp;rn=100&amp;amp;pn=1 tn=resultjson_com 必填，不填404，应该是定义返回格式的 ipn=rj 必填，不填404，功能未知。。。 word=关键字 填入要检索的内容 rn=100 range number 每页条数 pn=1 page number 当前页 查询结果：
+然后就可以根据查询的图片地址，愉快的选图了 O(∩_∩)O哈哈~</description>
+    </item>
+    
+    <item>
+      <title>kubeadm config image 阿里云镜像</title>
+      <link>https://lluck42.gitee.io/note/tkinter-excel-change-column/</link>
+      <pubDate>Tue, 09 Feb 2021 10:39:57 +0800</pubDate>
+      
+      <guid>https://lluck42.gitee.io/note/tkinter-excel-change-column/</guid>
+      <description>tkinter excel列互换 1、拖放需要装换的到窗口
+2、输入规则
+3、点击转换
+转换的文件会产生在 exe 同目录下
+dist 中有 pyinstaller 编译好的 exe 文件
+https://gitee.com/lluck42/tkinter-excel-change-column</description>
+    </item>
+    
     <item>
       <title>Snow White and the Seven Dwarfs</title>
       <link>https://lluck42.gitee.io/note/%E7%99%BD%E9%9B%AA%E5%85%AC%E4%B8%BB/</link>
