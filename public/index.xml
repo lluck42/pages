@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>lluck42</copyright>
-    <lastBuildDate>Mon, 08 Mar 2021 11:43:25 +0800</lastBuildDate><atom:link href="https://lluck42.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Feb 2022 10:46:42 +0800</lastBuildDate><atom:link href="https://lluck42.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>token-centre</title>
+      <link>https://lluck42.gitee.io/note/token%E4%B8%AD%E5%BF%83/</link>
+      <pubDate>Wed, 09 Feb 2022 10:46:42 +0800</pubDate>
+      
+      <guid>https://lluck42.gitee.io/note/token%E4%B8%AD%E5%BF%83/</guid>
+      <description>token-centre 介绍  token-centre token中心 低延迟、零依赖、可扩展、流程简单 支持 微信公众号 场景 用于单个公司多个产品，多平台 token 中心存储 只需填写 appid appsecret 等关键信息 延迟2ms~3ms  软件架构 gin、内存缓存、sqlite3 零依赖 可直接运行</description>
+    </item>
+    
     <item>
       <title>百度图片检索api</title>
       <link>https://lluck42.gitee.io/note/baidu-picture-search-api/</link>
