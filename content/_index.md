@@ -1,7 +1,7 @@
 ---
 title: "lluck42的个人主页"
 featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-description: "The last theme you'll ever need. Maybe."
+description: "随机发布一些小心得、开源项目、以及个人生活"
 ---
 
-### Welcome to my blog with some of my work in progress. I've been working on this book idea. You can read some of the chapters below.
+### 欢迎来到我的个人站点https://lluck42.gitee.io 个人仓库主页 https://gitee.com/lluck42
